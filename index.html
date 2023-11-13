@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/bundle.css" />
+    <title>Júlio Neves</title>
+  </head>
+  <body>
+    <nav id="main-nav" class="navbar">
+      <div class="navbar-header"><a href="#home">Júlio Neves</a></div>
+      <div class="navbar-nav">
+        <ul class="navbar-items">
+          <li class="navbar-item">Sobre</li>
+          <li class="navbar-item">Habilidades</li>
+          <li class="navbar-item">Contato</li>
+        </ul>
+        <a
+          href="javascript:void(0);"
+          class="navbar-hamburguer"
+          onclick="handleShowNavbar()"
+        >
+          <span>&#8803;</span>
+        </a>
+      </div>
+    </nav>
+
+    <div class="hero" id="home">
+      <div class="overlay"></div>
+      <div class="lead">
+        It is a long established fact that a reader will be distracted by the
+        readable content of a page when looking at its layout
+      </div>
+    </div>
+
+    <div>
+      <a href="#sobre">Sobre</a>
+      <p>
+        Olá, eu sou o Júlio, tenho experiência em desenvolvimento full stack e
+        análise de dados em ambientes ágeis. Atualmente tenho como foco, além do
+        desenvolvimento full stack, o desenvolvimento de front-end.
+      </p>
+    </div>
+
+    <div>
+      <p>
+        Olá, eu sou o Júlio, tenho experiência em desenvolvimento full stack e
+        análise de dados em ambientes ágeis. Atualmente tenho como foco, além do
+        desenvolvimento full stack, o desenvolvimento de front-end.
+      </p>
+    </div>
+
+    <div>
+      <p>
+        Olá, eu sou o Júlio, tenho experiência em desenvolvimento full stack e
+        análise de dados em ambientes ágeis. Atualmente tenho como foco, além do
+        desenvolvimento full stack, o desenvolvimento de front-end.
+      </p>
+    </div>
+
+    <footer>Júlio Neves - &copy 2023</footer>
+  </body>
+  <script>
+    function handleShowNavbar() {
+      let myNav = document.getElementById("main-nav");
+      if (myNav.classList.contains("navbar-responsive")) {
+        myNav.classList.remove("navbar-responsive");
+      } else {
+        myNav.classList.add("navbar-responsive");
+      }
+    }
+  </script>
+</html>
