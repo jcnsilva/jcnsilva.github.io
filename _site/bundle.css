@@ -21,7 +21,7 @@ input, button, textarea, select {
 /*        USER STYLES       */
 :root {
   --navbar-height: 3rem;
-  --primary-color: #094a34;
+  --primary-color: #4a0943;
 
   font-family: 'Kanit', sans-serif;
 }
@@ -95,7 +95,7 @@ body {
   top: 3rem;
   left: 0;
   width: 100%;
-  background-color: #2d7a61;
+  background-color: #5f1457;
   flex-direction: column;
   display: inline-block;
 }
@@ -148,16 +148,16 @@ body {
   font-size: min(calc(1.25rem + 1vw), 3rem);
 }
 
-.container {
+#container {
   width: 80%;
   margin: auto;
 }
 
 .section {
-  padding-top: 1rem;
+  margin-block: 2.5rem;
 }
 
-.abilities-list {
+.skills-list {
   margin-left: 3rem;
 }
 

@@ -21,7 +21,7 @@
             <a class="navbar-link" href="#about">Sobre</a>
           </li>
           <li class="navbar-item">
-            <a class="navbar-link" href="#abilities">Habilidades</a>
+            <a class="navbar-link" href="#skills">Habilidades</a>
           </li>
           <li class="navbar-item">
             <a class="navbar-link" href="#contact">Contato</a>
@@ -42,22 +42,25 @@
       <div class="lead">Olá! Boas vindas à minha página!</div>
     </div>
 
-    <div class="container">
-      <div class="section">
+    <article id="container">
+      <section class="section">
         <h1 id="about">Sobre</h1>
         <p>
           Eu sou o Júlio, tudo bem? Tenho experiência em desenvolvimento full
-          stack e análise de dados em ambientes ágeis. Atualmente tenho como
-          foco, além do desenvolvimento full stack, o desenvolvimento de
-          front-end.
+          stack e análise de dados em ambientes ágeis.
         </p>
-      </div>
+        <p>
+          Tenho interesse por padrões de desenvolvimento e entrega contínua e
+          atualmente tenho como foco, além do desenvolvimento full stack, o
+          desenvolvimento de front-end.
+        </p>
+      </section>
 
-      <div class="section">
-        <h1 id="abilities">Habilidades</h1>
+      <section class="section">
+        <h1 id="skills">Habilidades</h1>
         <div>
           Minhas principais habilidades são:
-          <ul class="abilities-list">
+          <ul class="skills-list">
             <li>Javascript / Typescript;</li>
             <li>React / Angular;</li>
             <li>HTML 5 / CSS 3;</li>
@@ -69,9 +72,9 @@
             <li>Scrum / Kanban</li>
           </ul>
         </div>
-      </div>
+      </section>
 
-      <div class="section">
+      <section class="section">
         <h1 id="contact">Contato</h1>
         <p>
           Para saber mais, você pode me contatar no
@@ -82,19 +85,10 @@
           <a class="contact-link" href="https://github.com/jcnevess/">Github</a
           >.
         </p>
-      </div>
-    </div>
+      </section>
+    </article>
 
-    <footer>Júlio Neves - &copy 2023</footer>
+    <footer>Júlio Neves - &copy 2024</footer>
   </body>
-  <script>
-    function handleShowNavbar() {
-      let myNav = document.getElementById("main-nav");
-      if (myNav.classList.contains("navbar-responsive")) {
-        myNav.classList.remove("navbar-responsive");
-      } else {
-        myNav.classList.add("navbar-responsive");
-      }
-    }
-  </script>
+  <script src="./bundle.js" async></script>
 </html>
