@@ -17,3 +17,9 @@ function toggleLights() {
     root.dataset.theme = "light";
   }
 }
+
+function toggleNavbar() {
+  const navbar = document.querySelector(".nav-links");
+
+  navbar.classList.toggle("md-navigation-closed");
+}
