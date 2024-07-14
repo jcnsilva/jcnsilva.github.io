@@ -425,6 +425,33 @@ a:active::after, a:hover::after {
     width: 100%;
   }
 
+  .nav-links {
+    flex-direction: column;
+    background-color: black;
+    flex-grow: unset;
+    width: 70%;
+    align-self: flex-start;
+  }
+
+  .nav-link {
+    height: var(--dimen-navbar-height);
+    display: flex;
+    padding-left: 2vw;
+  }
+
+  .nav-link a {
+    display: block;
+    margin-block: auto;
+  }
+
+  a::after {
+    transform: translateX(calc(-101% - 2vw))
+  }
+  
+  a:active::after, a:hover::after {
+    transform: translateX(0);
+  }
+
   .content-section {
     padding: 3rem;
   }
@@ -472,6 +499,14 @@ a:active::after, a:hover::after {
     display: flex;
     column-gap: 1rem;
     justify-content: space-between;
+  }
+
+  .md-navigation-closed .nav-link {
+    display: none;
+  }
+
+  .md-navigation-closed .nav-link-active {
+    display: flex;
   }
 }
 
