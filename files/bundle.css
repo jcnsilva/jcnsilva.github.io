@@ -378,6 +378,7 @@ a:active::after, a:hover::after {
   }
 
   .header-brand {
+    text-align: right;
     grid-row: 1 / 4;
     grid-column: 1 / all;
     z-index: 1;

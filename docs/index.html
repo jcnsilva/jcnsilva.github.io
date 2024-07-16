@@ -93,7 +93,7 @@
         >
           <picture data-title="Aventura">
             <source srcset="./files/images/aventura_mobile.png" media="(max-width: 720px)">
-            <img src="./files/images/aventura.png" alt="Aventura" />
+            <img src="./files/images/aventura.png" alt="Aventura" loading="lazy"/>
           </picture>
         </div>
         <div
@@ -103,7 +103,7 @@
         >
           <picture>
             <source srcset="./files/images/sunnyside_mobile.png" media="(max-width: 720px)">
-            <img src="./files/images/sunnyside.png" alt="Sunnyside" />
+            <img src="./files/images/sunnyside.png" alt="Sunnyside" loading="lazy"/>
           </picture>
         </div>
         <div
@@ -113,7 +113,7 @@
         >
           <picture>
             <source srcset="./files/images/loopstudios_mobile.png" media="(max-width: 720px)">
-            <img src="./files/images/loopstudios.png" alt="Loopstudios" />
+            <img src="./files/images/loopstudios.png" alt="Loopstudios" loading="lazy"/>
           </picture>
         </div>
         <div
@@ -122,7 +122,9 @@
           onclick="toggleSpotlight(4)"
         >
           <picture>
-            <img src="./files/images/results.png" alt="Results" />
+            <!-- this source avoid images from loading on small screens. It is a blank svg-->
+            <source srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'/%3E" media="(max-width: 720px)">
+            <img src="./files/images/results.png" alt="Results" loading="lazy"/>
           </picture>
         </div>
         <div
@@ -131,7 +133,8 @@
           onclick="toggleSpotlight(5)"
         >
           <picture>
-            <img src="./files/images/comments.png" alt="Interactive Comments" />
+            <source srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'/%3E" media="(max-width: 720px)">
+            <img src="./files/images/comments.png" alt="Interactive Comments" loading="lazy"/>
           </div>
         </picture>
         <div
@@ -140,7 +143,8 @@
           onclick="toggleSpotlight(6)"
         >
           <picture>
-            <img src="./files/images/tracker.png" alt="Time Tracker" />
+            <source srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'/%3E" media="(max-width: 720px)">
+            <img src="./files/images/tracker.png" alt="Time Tracker" loading="lazy"/>
           </picture>
         </div>
       </div>
@@ -183,6 +187,6 @@ que te programam?</pre>
       </div>
       <div class="footer-attribution">&copy; Júlio César Neves - 2024</div>
     </section>
-    <script src="files/bundle.js"></script>
+    <script src="files/bundle.js" async></script>
   </body>
 </html>
