@@ -1,5 +1,7 @@
 /*           CSS RESET        */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -8,23 +10,29 @@
   padding: 0;
 }
 
-img, picture, video, canvas, svg {
+img,
+picture,
+video,
+canvas,
+svg {
   display: block;
   max-width: 100%;
 }
 
-input, button, textarea, select {
+input,
+button,
+textarea,
+select {
   font: inherit;
 }
 
-
 /*        USER STYLES       */
 :root[data-theme="light"] {
-  --color-dark-blue: #023E73;
-  --color-light-blue: #048ABF;
-  --color-light-orange: #F2811D;
-  --color-dark-orange: #D96523;
-  --color-red: #BF2A2A;
+  --color-dark-blue: #023e73;
+  --color-light-blue: #048abf;
+  --color-light-orange: #f2811d;
+  --color-dark-orange: #d96523;
+  --color-red: #bf2a2a;
   --color-primary: black;
   --color-secondary: white;
   --color-background: white;
@@ -36,7 +44,7 @@ input, button, textarea, select {
   --color-light-blue: #025373;
   --color-light-orange: #995112;
   --color-dark-orange: #361909;
-  --color-red: #801C1C;
+  --color-red: #801c1c;
   --color-primary: white;
   --color-secondary: white;
   --color-background: black;
@@ -51,8 +59,7 @@ html {
 
 body {
   background-color: var(--color-background);
-  transition: background-color 500ms ease-in,
-    color 500ms ease-out;
+  transition: background-color 500ms ease-in, color 500ms ease-out;
 }
 
 pre {
@@ -60,8 +67,7 @@ pre {
 }
 
 section {
-  transition: background-color 500ms ease-in,
-    color 500ms ease-out;
+  transition: background-color 500ms ease-in, color 500ms ease-out;
 }
 
 a::after {
@@ -73,7 +79,8 @@ a::after {
   transition: transform 500ms ease-out;
 }
 
-a:active::after, a:hover::after {
+a:active::after,
+a:hover::after {
   transform: translateX(0);
 }
 
@@ -84,7 +91,7 @@ a:active::after, a:hover::after {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: 'Unica One', sans-serif;
+  font-family: "Unica One", sans-serif;
   color: var(--color-primary);
   font-weight: normal;
   font-size: calc(4rem + 2vw);
@@ -103,9 +110,9 @@ a:active::after, a:hover::after {
 }
 
 .header-mosaic {
-    height: 80dvh;
-    max-width: 1200px;
-    margin: 6dvh auto;
+  height: 80dvh;
+  max-width: 1200px;
+  margin: 6dvh auto;
 }
 
 .header-rectangle {
@@ -143,16 +150,16 @@ a:active::after, a:hover::after {
 }
 
 .navbar {
-    display: flex;
-    background-color: black;
-    color: white;
-    position: sticky;
-    top: 0;
-    left: 0;
-    height: var(--dimen-navbar-height);
-    justify-content: space-between;
-    font-size: 1.5rem;
-    padding-inline: 2vw;
+  display: flex;
+  background-color: black;
+  color: white;
+  position: sticky;
+  top: 0;
+  left: 0;
+  height: var(--dimen-navbar-height);
+  justify-content: space-between;
+  font-size: 1.5rem;
+  padding-inline: 2vw;
 }
 
 .navbar-nav {
@@ -170,7 +177,7 @@ a:active::after, a:hover::after {
 }
 
 .nav-link {
-  font-family: 'Unica One', sans-serif;
+  font-family: "Unica One", sans-serif;
   text-transform: uppercase;
   cursor: pointer;
   overflow: hidden;
@@ -212,18 +219,8 @@ a:active::after, a:hover::after {
   color: var(--color-secondary);
 }
 
-.footer {
-  background-color: var(--color-dark-blue);
-  color: var(--color-secondary);
-  padding-top: 4rem;
-}
-
-.footer h2 {
-  margin-bottom: 2rem;
-}
-
 .section-header {
-  font-family: 'Unica One', sans-serif;
+  font-family: "Unica One", sans-serif;
   text-transform: uppercase;
   font-weight: normal;
   font-size: 2.5rem;
@@ -242,6 +239,16 @@ a:active::after, a:hover::after {
   row-gap: 2rem;
 }
 
+.footer {
+  background-color: var(--color-dark-blue);
+  color: var(--color-secondary);
+  padding-bottom: 0;
+}
+
+.footer h2 {
+  margin-bottom: 2rem;
+}
+
 .section-text {
   flex-grow: 1;
   font-size: clamp(1.25rem, 2vw, 1.75rem);
@@ -257,9 +264,41 @@ a:active::after, a:hover::after {
   margin-block: 0.25rem;
 }
 
-.footer-sections {
+.footer-form {
+  grid-column: 1 / span 2;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.form-header {
+  font-size: 1.15rem;
+}
+
+.form-body {
+  display: grid;
+  grid-template-rows: repeat(4, 7.5vh);
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+}
+
+.form-field {
+  width: 100%;
+  padding: 0.5rem;
+  resize: none;
+}
+
+textarea.form-field {
+  grid-column: 1 / span 2;
+  grid-row: 2 / span 2;
+}
+
+.form-button {
+  grid-column: 1 / span 2;
+  background-color: white;
+  border: none;
+  padding: 0.5rem;
 }
 
 .footer-section {
@@ -268,8 +307,12 @@ a:active::after, a:hover::after {
 
 .footer-attribution {
   text-align: center;
-  padding-block: 1rem;
   font-size: 0.9rem;
+}
+
+.footer-contacts {
+  display: flex;
+  justify-content: space-around;
 }
 
 .footer-contact {
@@ -281,6 +324,7 @@ a:active::after, a:hover::after {
 .footer-contact a {
   display: inline-block;
   text-decoration: none;
+  text-align: center;
   color: inherit;
 }
 
@@ -289,7 +333,7 @@ a:active::after, a:hover::after {
   text-align: right;
 }
 
-.contact-network {
+.contact-title {
   font-weight: bold;
 }
 
@@ -371,7 +415,7 @@ a:active::after, a:hover::after {
   }
 
   .header-mosaic {
-    grid-template-rows: repeat(8, minmax(0, 1fr)); 
+    grid-template-rows: repeat(8, minmax(0, 1fr));
     grid-template-columns: repeat(10, minmax(0, 1fr));
     padding-inline: 3rem;
     margin-top: calc(6dvh + var(--dimen-navbar-height));
@@ -390,34 +434,34 @@ a:active::after, a:hover::after {
     font-size: calc(3rem + 2vw);
   }
 
-  #rectangle-1 { 
+  #rectangle-1 {
     grid-row: 1 / 4;
     grid-column: 1 / all;
-    background-color: var(--color-dark-blue); 
-  } 
-  
-  #rectangle-2 { 
-    grid-column: 1 / 7; 
-    grid-row: 4 / 7; 
-    background-color: var(--color-light-blue); 
-  } 
-  
-  #rectangle-3 { 
-    grid-column: 1 / 7; 
-    grid-row: 7 / all; 
-    background-color: var(--color-light-orange); 
-  } 
-  
-  #rectangle-4 { 
-    grid-column: 7 / all; 
-    grid-row: 4 / 6; 
-    background-color: var(--color-dark-orange); 
-  } 
-  
-  #rectangle-5 { 
-    grid-column: 7 / all; 
-    grid-row: 6 / all; 
-    background-color: var(--color-red); 
+    background-color: var(--color-dark-blue);
+  }
+
+  #rectangle-2 {
+    grid-column: 1 / 7;
+    grid-row: 4 / 7;
+    background-color: var(--color-light-blue);
+  }
+
+  #rectangle-3 {
+    grid-column: 1 / 7;
+    grid-row: 7 / all;
+    background-color: var(--color-light-orange);
+  }
+
+  #rectangle-4 {
+    grid-column: 7 / all;
+    grid-row: 4 / 6;
+    background-color: var(--color-dark-orange);
+  }
+
+  #rectangle-5 {
+    grid-column: 7 / all;
+    grid-row: 6 / all;
+    background-color: var(--color-red);
   }
 
   .navbar {
@@ -446,10 +490,11 @@ a:active::after, a:hover::after {
   }
 
   a::after {
-    transform: translateX(calc(-101% - 2vw))
+    transform: translateX(calc(-101% - 2vw));
   }
-  
-  a:active::after, a:hover::after {
+
+  a:active::after,
+  a:hover::after {
     transform: translateX(0);
   }
 
@@ -471,7 +516,9 @@ a:active::after, a:hover::after {
     grid-column: span 2;
   }
 
-  #gallery-item-4, #gallery-item-5, #gallery-item-6 {
+  #gallery-item-4,
+  #gallery-item-5,
+  #gallery-item-6 {
     display: none;
   }
 
@@ -490,10 +537,6 @@ a:active::after, a:hover::after {
 
   .footer-quote pre {
     font-size: 0.8rem;
-  }
-
-  .footer-attribution {
-    padding-block: 0.75rem;
   }
 
   .footer-contacts {
@@ -518,7 +561,7 @@ a:active::after, a:hover::after {
     --color-light-blue: #025373;
     --color-light-orange: #995112;
     --color-dark-orange: #361909;
-    --color-red: #801C1C;
+    --color-red: #801c1c;
     --color-primary: white;
     --color-secondary: white;
     --color-background: black;
