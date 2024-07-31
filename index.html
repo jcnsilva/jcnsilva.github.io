@@ -13,6 +13,17 @@
       href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Unica+One&display=swap"
       rel="stylesheet"
     />
+    <!-- Google Recaptcha -->
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+    <script>
+      function onSubmit() {
+        document.getElementById("contact-form").submit();
+      }
+
+      window.onbeforeunload = () => {
+        document.getElementById("contact-form").reset();
+      };
+    </script>
     <title>Júlio César Neves | Portfólio</title>
   </head>
   <!-- Google tag (gtag.js) -->
@@ -234,47 +245,58 @@
     </section>
     <section id="footer" class="content-section full-screen-section footer">
       <h2 class="section-header">Contato</h2>
-      <div class="footer-form">
-        <div class="form-header contact-title">Envie uma mensagem</div>
-        <form
-          action="https://formspree.io/f/xdkngeog"
-          method="POST"
-          class="form-body"
-        >
-          <input
-            type="text"
-            name="name"
-            placeholder="Nome"
-            class="form-field"
-          />
-          <input
-            type="email"
-            name="email"
-            placeholder="Email"
-            class="form-field"
-          />
-          <textarea
-            name="message"
-            placeholder="Mensagem"
-            class="form-field"
-          ></textarea>
+      <div class="footer-body">
+        <div class="footer-form">
+          <div class="form-header contact-title">Envie uma mensagem</div>
+          <form
+            id="contact-form"
+            action="https://formspree.io/f/xdkngeog"
+            method="POST"
+            class="form-body"
+          >
+            <input
+              type="text"
+              name="name"
+              placeholder="Nome"
+              class="form-field"
+            />
+            <input
+              type="email"
+              name="email"
+              placeholder="Email"
+              class="form-field"
+            />
+            <textarea
+              name="message"
+              placeholder="Mensagem"
+              class="form-field"
+            ></textarea>
 
-          <button type="submit" class="form-button">Enviar</button>
-        </form>
-      </div>
-      <div class="footer-section footer-contacts">
-        <div class="footer-contact">
-          <a href="https://www.linkedin.com/in/jcnevess/"
-            ><span class="contact-title">LinkedIn: </span>jcnevess</a
-          >
+            <button
+              type="submit"
+              class="g-recaptcha form-button"
+              data-sitekey="6Lcj6BsqAAAAAGuFxCfXysd0cUOTIHSlCWh64w1W"
+              data-callback="onSubmit"
+              data-action="submit"
+            >
+              Enviar
+            </button>
+          </form>
         </div>
-        <div class="footer-contact">
-          <a href="https://github.com/jcnevess"
-            ><span class="contact-title">Github: </span>jcnevess</a
-          >
+        <div class="footer-section footer-contacts">
+          <div class="footer-contact">
+            <a href="https://www.linkedin.com/in/jcnevess/"
+              ><span class="contact-title">LinkedIn: </span>jcnevess</a
+            >
+          </div>
+          <div class="footer-contact">
+            <a href="https://github.com/jcnevess"
+              ><span class="contact-title">Github: </span>jcnevess</a
+            >
+          </div>
         </div>
+        <div class="footer-attribution">&copy; Júlio César Neves - 2024</div>
       </div>
-      <div class="footer-attribution">&copy; Júlio César Neves - 2024</div>
     </section>
     <script src="files/bundle.js" async></script>
   </body>

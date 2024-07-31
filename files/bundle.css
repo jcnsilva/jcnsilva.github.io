@@ -243,10 +243,18 @@ a:hover::after {
   background-color: var(--color-dark-blue);
   color: var(--color-secondary);
   padding-bottom: 0;
+  gap: 0;
 }
 
 .footer h2 {
   margin-bottom: 2rem;
+}
+
+.footer-body {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  flex-grow: 1;
 }
 
 .section-text {
@@ -283,6 +291,10 @@ a:hover::after {
   gap: 0.5rem;
 }
 
+.form-body div {
+  display: none;
+}
+
 .form-field {
   width: 100%;
   padding: 0.5rem;
@@ -299,6 +311,7 @@ textarea.form-field {
   background-color: white;
   border: none;
   padding: 0.5rem;
+  cursor: pointer;
 }
 
 .footer-section {
@@ -335,6 +348,10 @@ textarea.form-field {
 
 .contact-title {
   font-weight: bold;
+}
+
+.grecaptcha-badge {
+  display: none !important;
 }
 
 .portfolio-gallery {
