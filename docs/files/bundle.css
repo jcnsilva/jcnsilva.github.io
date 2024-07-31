@@ -84,9 +84,6 @@ a:hover::after {
   transform: translateX(0);
 }
 
-.header {
-}
-
 .header-brand {
   display: flex;
   align-items: center;
