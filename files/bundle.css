@@ -46,7 +46,7 @@ select {
   --color-dark-orange: #361909;
   --color-red: #801c1c;
   --color-primary: white;
-  --color-secondary: white;
+  --color-secondary: black;
   --color-background: black;
   --dimen-navbar-height: 8dvh;
 }
@@ -214,7 +214,7 @@ section {
 
 .skills {
   background-color: var(--color-red);
-  color: var(--color-secondary);
+  color: white;
 }
 
 .section-header {
@@ -239,7 +239,7 @@ section {
 
 .footer {
   background-color: var(--color-dark-blue);
-  color: var(--color-secondary);
+  color: white;
   padding-bottom: 0;
   gap: 0;
 }
@@ -306,8 +306,8 @@ textarea.form-field {
 
 .form-button {
   grid-column: 1 / span 2;
-  background-color: var(--color-primary);
-  color: var(--color-secondary);
+  background-color: black;
+  color: white;
   border: none;
   padding: 0.5rem;
   cursor: pointer;
@@ -486,7 +486,7 @@ textarea.form-field {
     align-items: end;
     justify-content: right;
     padding-right: 0.5rem;
-    color: var(--color-secondary);
+    color: white;
     font-size: calc(3rem + 2vw);
   }
 
@@ -622,15 +622,11 @@ textarea.form-field {
     --color-dark-orange: #361909;
     --color-red: #801c1c;
     --color-primary: white;
-    --color-secondary: white;
+    --color-secondary: black;
     --color-background: black;
   }
 
   #nav-option-theme {
     display: none;
-  }
-
-  .form-button {
-    color: black;
   }
 }
