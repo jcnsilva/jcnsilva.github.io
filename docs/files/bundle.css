@@ -70,7 +70,7 @@ section {
   transition: background-color 500ms ease-in, color 500ms ease-out;
 }
 
-a::after {
+.main-link::after {
   content: "";
   display: block;
   width: 100%;
@@ -79,8 +79,8 @@ a::after {
   transition: transform 500ms ease-out;
 }
 
-a:active::after,
-a:hover::after {
+.main-link:active::after,
+.main-link:hover::after {
   transform: translateX(0);
 }
 
@@ -157,6 +157,7 @@ a:hover::after {
   justify-content: space-between;
   font-size: 1.5rem;
   padding-inline: 2vw;
+  z-index: 1000;
 }
 
 .navbar-nav {
@@ -185,7 +186,7 @@ a:hover::after {
   text-decoration: none;
 }
 
-.nav-link-active a::after {
+.nav-link-active .main-link::after {
   content: "";
   display: block;
   width: 100%;
@@ -305,7 +306,8 @@ textarea.form-field {
 
 .form-button {
   grid-column: 1 / span 2;
-  background-color: white;
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
   border: none;
   padding: 0.5rem;
   cursor: pointer;
@@ -370,6 +372,8 @@ textarea.form-field {
   background-color: var(--color-dark-blue);
   overflow: hidden;
   transition: background-color 500ms ease-in;
+  cursor: pointer;
+  position: relative;
 }
 
 .gallery-item picture {
@@ -380,6 +384,44 @@ textarea.form-field {
   height: 100%;
   width: 100%;
   object-fit: contain;
+}
+
+.gallery-item-snippet {
+  display: none;
+}
+
+.gallery-spotlight .gallery-item-snippet {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  background-color: rgba(255, 255, 255, 0.7);
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  place-content: center;
+  cursor: pointer;
+}
+
+.gallery-item-link {
+  display: flex;
+  flex-direction: column;
+  place-content: center;
+  place-items: center;
+  text-decoration: none;
+  color: black;
+}
+
+.gallery-item-title {
+  font-size: 1.5rem;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+.gallery-item-subtitle {
+  display: block;
+  font-size: 1rem;
+  font-weight: bold;
 }
 
 .gallery-spotlight {
@@ -480,7 +522,6 @@ textarea.form-field {
 
   .navbar {
     position: fixed;
-    z-index: 1000;
     width: 100%;
   }
 
@@ -503,12 +544,12 @@ textarea.form-field {
     margin-block: auto;
   }
 
-  a::after {
+  .main-link::after {
     transform: translateX(calc(-101% - 2vw));
   }
 
-  a:active::after,
-  a:hover::after {
+  .main-link:active::after,
+  .main-link:hover::after {
     transform: translateX(0);
   }
 
@@ -528,6 +569,10 @@ textarea.form-field {
   .gallery-spotlight {
     grid-row: span 2;
     grid-column: span 2;
+  }
+
+  .gallery-item-title {
+    font-size: 1.25rem;
   }
 
   #gallery-item-4,
@@ -583,5 +628,9 @@ textarea.form-field {
 
   #nav-option-theme {
     display: none;
+  }
+
+  .form-button {
+    color: black;
   }
 }
