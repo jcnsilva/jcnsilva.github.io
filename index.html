@@ -13,33 +13,8 @@
       href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Unica+One&display=swap"
       rel="stylesheet"
     />
-    <!-- Google Recaptcha -->
-    <script defer src="https://www.google.com/recaptcha/api.js"></script>
-    <script>
-      function onSubmit() {
-        document.getElementById("contact-form").submit();
-      }
-
-      window.onbeforeunload = () => {
-        document.getElementById("contact-form").reset();
-      };
-    </script>
     <title>Júlio César Neves | Portfólio</title>
   </head>
-  <!-- Google tag (gtag.js) -->
-  <script
-    defer
-    src="https://www.googletagmanager.com/gtag/js?id=G-PRXCQYLTVK"
-  ></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag("js", new Date());
-
-    gtag("config", "G-PRXCQYLTVK");
-  </script>
   <body>
     <section id="header" class="header">
       <div class="header-mosaic">
@@ -367,5 +342,30 @@
       </div>
     </section>
     <script src="files/bundle.js" async></script>
+    <!-- Google Recaptcha -->
+    <script defer src="https://www.google.com/recaptcha/api.js"></script>
+    <script>
+      function onSubmit() {
+        document.getElementById("contact-form").submit();
+      }
+
+      window.onbeforeunload = () => {
+        document.getElementById("contact-form").reset();
+      };
+    </script>
+    <!-- Google tag (gtag.js) -->
+    <script
+      defer
+      src="https://www.googletagmanager.com/gtag/js?id=G-PRXCQYLTVK"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-PRXCQYLTVK");
+    </script>
   </body>
 </html>
